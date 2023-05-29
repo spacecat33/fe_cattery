@@ -1,4 +1,6 @@
 import React from 'react';
+import { render } from 'react-dom'; 
+import StorePicker from './StorePicker';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
@@ -16,6 +18,9 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
+
+
+render(<StorePicker />, document.querySelector('#main')); 
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
